@@ -30,11 +30,11 @@
       <section class="img-upload">
         <div class="img-upload__wrapper">
           <h2 class="img-upload__title  visually-hidden">Загрузка фотографии</h2>
-          <form class="img-upload__form" id="upload-select-image" method="post" action="https://javascript.pages.academy/kekstagram" enctype="multipart/form-data" autocomplete="off">
+          <form class="img-upload__form" id="upload-select-image" action="https://javascript.pages.academy/kekstagram" method="post" enctype="multipart/form-data" autocomplete="off">
 
             <!-- Изначальное состояние поля для загрузки изображения -->
             <fieldset class="img-upload__start">
-              <input type="file" id="upload-file" class="img-upload__input  visually-hidden" name="filename" accept="image/jpeg, image/jpg, image/png" required>
+              <input type="file" id="upload-file" class="img-upload__input  visually-hidden" name="filename" required>
               <label for="upload-file" class="img-upload__label  img-upload__control">Загрузить</label>
             </fieldset>
 
@@ -155,14 +155,6 @@
           <!-- Комментарии к изображению -->
           <div class="social__comment-count">5 из <span class="comments-count">125</span> комментариев</div>
           <ul class="social__comments">
-            <li class="social__comment">
-              <img class="social__picture" src="img/avatar-4.svg" alt="Аватар комментатора фотографии" width="35" height="35">
-              <p class="social__text">Мега фото! Просто обалдеть. Как вам так удалось?</p>
-            </li>
-            <li class="social__comment">
-              <img class="social__picture" src="img/avatar-3.svg" alt="Аватар комментатора фотографии" width="35" height="35">
-               <p class="social__text">Да это фоташоп!!!!!!!!</p>
-            </li>
           </ul>
 
           <!-- Кнопка для загрузки новой порции комментариев -->
@@ -208,13 +200,13 @@
     </a>
   </template>
 
+  <!-- Шаблон изображения случайного пользователя -->
   <template id="comment">
     <li class="social__comment">
-      <img class="social__picture" src="img/avatar-3.svg" alt="Аватар комментатора фотографии" width="35" height="35">
-      <p class="social__text">Да это фоташоп!!!!!!!!</p>
+      <img class="social__picture" src="" alt="" width="35" height="35">
+      <p class="social__text"></p>
     </li>
   </template>
-
 
   <!-- Сообщение с ошибкой загрузки изображения -->
   <template id="error">
@@ -241,17 +233,17 @@
     <div class="img-upload__message  img-upload__message--loading">Загружаем...</div>
   </template>
 
-  <script src="js/utils/utils.js"></script>
-  <script src="js/data/data-api.js"></script>
-  <script src="js/data/uploaded-pic.js"></script>
-  <script src="js/pictures/picture.js"></script>
-  <script src="js/pictures/preview.js"></script>
-  <script src="js/form/scale.js"></script>
-  <script src="js/form/slider.js"></script>
-  <script src="js/form/effects.js"></script>
-  <script src="js/form/validation.js"></script>
-  <script src="js/pictures/filter.js"></script>
-  <script src="js/form/form.js"></script>
+  <script src="js/backend.js"></script>
+  <script src="js/util.js"></script>
+  <script src="js/scale-spin.js"></script>
+  <script src="js/effect-range.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/preview.js"></script>
+  <script src="js/picture.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/debounce.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/main.js"></script>
 
 </body>
 </html>
